@@ -8,7 +8,7 @@ const OrderList = () => {
 
   useEffect(() => {
     // Fetch orders when the component mounts
-    axios.get('http://localhost:5000/api/totalorders')
+    axios.get('https://orbi-master-api.onrender.com/api/totalorders')
       .then(response => {
         setOrders(response.data.orderList);
         console.log(response.data.orderList);
@@ -22,7 +22,7 @@ const OrderList = () => {
 
   const handleDeleteOrder = async (orderId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/orders/${orderId}`);
+      const response = await axios.delete(`https://orbi-master-api.onrender.com/api/orders/${orderId}`);
       console.log(response.data.message);
       // Remove the deleted order from the state
       setOrders(prevOrders => prevOrders.filter(order => order._id !== orderId));

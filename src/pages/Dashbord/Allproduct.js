@@ -6,7 +6,7 @@ const ProductList = () => {
 
   useEffect(() => {
     // Fetch all products when the component mounts
-    axios.get('http://localhost:5000/api/allproducts')
+    axios.get('https://orbi-master-api.onrender.com/api/allproducts')
       .then(response => {
         setProducts(response.data);
       })
@@ -17,7 +17,7 @@ const ProductList = () => {
 
   const handleDeleteProduct = async (productId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/products/${productId}`);
+      const response = await axios.delete(`https://orbi-master-api.onrender.com/api/products/${productId}`);
       console.log(response.data.message);
       // Handle UI updates or additional actions after successful deletion
       // For example, you might want to update the products state to reflect the deletion

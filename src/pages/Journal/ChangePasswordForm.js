@@ -11,7 +11,7 @@ const ChangePasswordForm = () => {
   const handleSubmit = async () => {
     try {
       // Call the backend API to change the password
-      const response = await axios.post('http://localhost:5000/change-password', {
+      const response = await axios.post('https://orbi-master-api.onrender.com/change-password', {
         userEmail,
         oldPassword,
         newPassword,

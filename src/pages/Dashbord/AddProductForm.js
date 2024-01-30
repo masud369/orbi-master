@@ -56,7 +56,7 @@ const AddProductForm = ({checkUserData}) => {
   };
 
   const getAllProduct = () => {
-    axios.get('http://localhost:5000/api/allproducts')
+    axios.get('https://orbi-master-api.onrender.com/api/allproducts')
       .then(response => {
         setProducts(response.data);
         console.log(response.data);
@@ -69,7 +69,7 @@ const AddProductForm = ({checkUserData}) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post(`http://localhost:5000/api/createproducts`, productDetails);
+    const response = await axios.post(`https://orbi-master-api.onrender.com/api/createproducts`, productDetails);
     console.log('Product created successfully:', response.data);
     
     // Display success toast

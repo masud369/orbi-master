@@ -9,7 +9,7 @@ const SignupForm = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/signup', {
+      const response = await axios.post('https://orbi-master-api.onrender.com/signup', {
         userEmail,
         password,
       });
